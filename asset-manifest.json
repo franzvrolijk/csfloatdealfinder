@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/csfloatdealfinder/static/css/main.da9d4fd2.css",
-    "main.js": "/csfloatdealfinder/static/js/main.a65b7d60.js",
+    "main.css": "/csfloatdealfinder/static/css/main.aab25fdd.css",
+    "main.js": "/csfloatdealfinder/static/js/main.6f6735ce.js",
     "static/js/787.77bc052e.chunk.js": "/csfloatdealfinder/static/js/787.77bc052e.chunk.js",
     "index.html": "/csfloatdealfinder/index.html",
-    "main.da9d4fd2.css.map": "/csfloatdealfinder/static/css/main.da9d4fd2.css.map",
-    "main.a65b7d60.js.map": "/csfloatdealfinder/static/js/main.a65b7d60.js.map",
+    "main.aab25fdd.css.map": "/csfloatdealfinder/static/css/main.aab25fdd.css.map",
+    "main.6f6735ce.js.map": "/csfloatdealfinder/static/js/main.6f6735ce.js.map",
     "787.77bc052e.chunk.js.map": "/csfloatdealfinder/static/js/787.77bc052e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da9d4fd2.css",
-    "static/js/main.a65b7d60.js"
+    "static/css/main.aab25fdd.css",
+    "static/js/main.6f6735ce.js"
   ]
 }
