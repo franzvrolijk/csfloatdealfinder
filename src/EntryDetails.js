@@ -22,7 +22,7 @@ function EntryDetails({ entry, buffCookie }) {
   };
 
   const getSecondCheapest = (entry) => {
-    fetch(`${baseUrl}/api/csFloat/secondCheapest/${entry.name}`, { method: "GET", mode: "cors" })
+    fetch(`${baseUrl}/api/csfloat/secondcheapest/${entry.name}`, { method: "GET", mode: "cors" })
       .then((res) => res.json())
       .then((data) => {
         setSecondCheapest(data);
