@@ -6,7 +6,6 @@ function App() {
   const [entries, setEntries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [displayLowVolume, setDisplayLowVolume] = useState(false);
-  const [buffCookie, setBuffCookie] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -17,17 +16,7 @@ function App() {
         setEntries(data);
         setLoading(false);
       });
-
-    const cookie = localStorage.getItem("buffCookie");
-    if (cookie) setBuffCookie(cookie);
   }, []);
-
-  const setCookie = () => {
-    const cookieInput = document.getElementById("cookie");
-    const cookieValue = cookieInput.value;
-    localStorage.setItem("buffCookie", cookieValue);
-    setBuffCookie(cookieValue);
-  };
 
   return (
     <>
@@ -38,17 +27,11 @@ function App() {
             <label htmlFor="displayLowVolume">Display low volume items:</label>
             <input id="displayLowVolume" className="checkbox" type="checkbox" value={displayLowVolume} onChange={(e) => setDisplayLowVolume(!displayLowVolume)}></input>
           </div>
-          <div>
-            <input id="cookie" className="cookieInput" placeholder="Buff cookie" defaultValue={buffCookie}></input>
-            <button onClick={setCookie} className="cookieSet">
-              Set
-            </button>
-          </div>
         </div>
         {!loading && (
           <div className="entryContainer">
             {entries.map((e) => (
-              <Entry buffCookie={buffCookie} entry={e} displayLowVolume={displayLowVolume} key={e.id}></Entry>
+              <Entry entry={e} displayLowVolume={displayLowVolume} key={e.id}></Entry>
             ))}
           </div>
         )}

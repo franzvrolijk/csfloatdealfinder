@@ -3,7 +3,7 @@ import EntryDetails from "./EntryDetails";
 import { discountEntryColor } from "./styleHelper";
 import Buff from "./Buff";
 
-function Entry({ entry, displayLowVolume, buffCookie }) {
+function Entry({ entry, displayLowVolume }) {
   if (!displayLowVolume && entry.tradeVolume < 20) return <></>;
 
   return (
@@ -13,7 +13,7 @@ function Entry({ entry, displayLowVolume, buffCookie }) {
       <p>Price: ${entry.price}</p>
       <Discount entry={entry}></Discount>
       <div className="btnContainer">
-        <EntryDetails className="infoContainer" entry={entry} buffCookie={buffCookie}></EntryDetails>
+        <EntryDetails className="infoContainer" entry={entry}></EntryDetails>
         <button onClick={() => window.open(`https://csfloat.com/item/${entry.id}`)} className="btn">
           Buy
         </button>
