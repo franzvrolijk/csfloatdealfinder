@@ -6,7 +6,7 @@ function EntryDetails({ entry, buffCookie }) {
   const [buffError, setBuffError] = useState(false);
   const [buffPrice, setBuffPrice] = useState(undefined);
 
-  const baseUrl = "https://csskinfinderapi20231225221304.azurewebsites.net";
+  const baseUrl = "https://knifescoutapi-bwfsegb8h2hfc5g0.northeurope-01.azurewebsites.net";
 
   const getBuff = (entry) => {
     fetch(`${baseUrl}/api/buff/${entry.name}/${encodeURIComponent(buffCookie)}`, { method: "GET", mode: "cors" })

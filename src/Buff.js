@@ -5,7 +5,10 @@ function Buff({ entry, buffCookie }) {
   const [buffPrice, setBuffPrice] = useState(undefined);
 
   const getBuff = (entry) => {
-    fetch(`http://localhost:5225/api/buff/${entry.name}/${encodeURIComponent(buffCookie)}`, { method: "GET", mode: "cors" })
+    fetch(`https://knifescoutapi-bwfsegb8h2hfc5g0.northeurope-01.azurewebsites.net/api/buff/${entry.name}/${encodeURIComponent(buffCookie)}`, {
+      method: "GET",
+      mode: "cors",
+    })
       .then((res) => res.json())
       .then((data) => {
         setBuffPrice(data);

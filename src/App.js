@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     setLoading(true);
 
-    fetch(`https://csskinfinderapi20231225221304.azurewebsites.net/api/csFloat/basePrice`, { method: "GET", mode: "cors" })
+    fetch(`https://knifescoutapi-bwfsegb8h2hfc5g0.northeurope-01.azurewebsites.net/api/csFloat/basePrice`, { method: "GET", mode: "cors" })
       .then((res) => res.json())
       .then((data) => {
         setEntries(data);
